@@ -4,6 +4,8 @@ charset=UTF-8">
 
 <title>Brett Billington</title>
 
+<link rel="stylesheet" href="main/flipclock/flipclock.css">
+
 <style type="text/css">
 @font-face {
     font-family:'Open Sans';
@@ -17,9 +19,21 @@ p.nameheader {
     text-align:center;
     margin-bottom: .5em;
 }
+p.namefooter {
+    font-family:"Open Sans";
+    font-size: 40px;
+    text-align:center;
+    margin-bottom: .25em;
+    margin-top: .25em;
+}
 img.logosimg {
     width:70px;
     height: 70px;
+}
+#footer{
+    width:100%;
+    position:absolute;
+    bottom: 0;
 }
 </style>
 
@@ -28,9 +42,10 @@ img.logosimg {
       href="\main\favicon.png">
 
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>          
-<script type='text/javascript' >
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
+<script src="main/flipclock/flipclock.min.js" ></script>
 
+<script type='text/javascript' >
 window.onload=function(){
 $('.logos').hover(function() {
     $('.logos').not($(this)).stop().animate({
@@ -55,5 +70,22 @@ $('.logos').hover(function() {
             <a href="\main\resume.pdf" class="logos"><img src="/main/resume.PNG" alt="Resume" class="logosimg" /></a>
            <a href="http://github.com/babillin" class="logos"><img src="/main/github.png" alt="github" class="logosimg" /></a>
     </p>
+    <div id="footer"> 
+        
+        <div class="clock" style="width: 620px; margin:auto;"></div>
+        <p class="namefooter">till May 3rd, 2014</p>
+    </div>
+    <script type="text/javascript">
+    var date  = new Date(Date.UTC(2014, 4, 3, 0, 0, 0));
+var now   = new Date();
+var diff  = (date.getTime()+18000000)/1000 - now.getTime()/1000;
+
+var clock = $('.clock').FlipClock(diff, { 
+    clockFace: 'DailyCounter',
+    countdown: true,
+    showSeconds: true
+    });
+</script>
+   
 </body>
 
