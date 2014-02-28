@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head><meta http-equiv="Content-Type" content="text/html;
+charset=UTF-8">
+
+<title>Brett Billington</title>
+
+<style type="text/css">
+@font-face {
+    font-family:'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Open Sans Light'), local('OpenSans-Light'), url(https://themes.googleusercontent.com/static/fonts/opensans/v8/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+p.nameheader {
+    font-family:"Open Sans";
+    font-size: 40px;
+    text-align:center;
+}
+
+</style>
+
+<link rel="icon"
+      type="image/png"
+      href="\main\favicon.png">
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>          
+<script type='text/javascript' >
+
+window.onload=function(){
+$('.logos').hover(function() {
+    $('.logos').not($(this)).stop().animate({
+        opacity: .3
+    }, 500);
+}, function() {
+    $('.logos').stop().animate({
+        opacity: 1
+    });
+}, 250);
+}  
+</script>
+
+
+</head>
+<body>
+    <p class="nameheader">Brett Billington</p>
+    <p align="center">
+        <a href="http://facebook.com/MrBillington" class="logos">
+            <img src="http://bbillington.com/main/facebook.png" alt="Facebook Profile" width="60" height="60" ></a>
+        <a href="http://www.linkedin.com/in/babillin" class="logos"><img src="http://bbillington.com/main/LinkedIn.PNG" alt="LinkedIn Profile" width="60" height="60" /></a>
+            <a href="\main\resume.pdf" class="logos"><img src="/main/resume.PNG" alt="Resume" width="60" height="60" /></a>
+           <a href="http://github.com/babillin" class="logos"><img src="/main/github.png" alt="github" width="60" height="60" /></a>
+
+    </p>
+</body>
+
