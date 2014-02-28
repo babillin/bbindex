@@ -24,6 +24,7 @@ p.namefooter {
     font-size: 40px;
     text-align:center;
     margin-bottom: .25em;
+    margin-top: .25em;
 }
 img.logosimg {
     width:70px;
@@ -70,18 +71,19 @@ $('.logos').hover(function() {
            <a href="http://github.com/babillin" class="logos"><img src="/main/github.png" alt="github" class="logosimg" /></a>
     </p>
     <div id="footer"> 
-        <p class="namefooter">May 3rd, 2014</p>
-        <div class="clock" style="width: 460px; margin:auto;"></div>
+        
+        <div class="clock" style="width: 620px; margin:auto;"></div>
+        <p class="namefooter">till May 3rd, 2014</p>
     </div>
     <script type="text/javascript">
     var date  = new Date(Date.UTC(2014, 4, 3, 0, 0, 0));
 var now   = new Date();
-var diff  = date.getTime()/1000 - now.getTime()/1000;
+var diff  = (date.getTime()+18000000)/1000 - now.getTime()/1000;
 
 var clock = $('.clock').FlipClock(diff, { 
     clockFace: 'DailyCounter',
     countdown: true,
-    showSeconds: false
+    showSeconds: true
     });
 </script>
    
